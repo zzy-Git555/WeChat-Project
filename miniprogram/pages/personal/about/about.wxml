@@ -1,0 +1,10 @@
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于小红帽影像馆</view>
+  <view class='text-content'>
+    <view>你好！欢迎使用小红帽影像馆</view>
+    <view class='margin-top-sm'>该项目仅限于学习开发小程序,由zzy-lala主要开发,cc辅助开发兼运营,UI界面借鉴于ColorUI、weUI</view>
+    <view class='margin-top-sm'>项目是开源的，不收取任何费用，如果这个项目有帮到你，或者你觉得很赞，可以在复制GitHub地址可下载相互学习！</view>
+    <view class='margin-top-sm'>更多功能敬请期待！</view>
+  </view>
+</view>

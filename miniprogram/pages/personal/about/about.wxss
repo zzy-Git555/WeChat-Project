@@ -1,0 +1,3 @@
+/* miniprogram/pages/personal/about/about.wxss */
+@import '/colorui/main.wxss';
+@import '/colorui/icon.wxss';
