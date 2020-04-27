@@ -1,0 +1,5 @@
+<import src='/pages/frameTemplate/frameTemplate.wxml' />
+<view class="content">
+  <view class="text1">自拍教程</view>
+  <template is='content' data='{{result}}' />
+</view>

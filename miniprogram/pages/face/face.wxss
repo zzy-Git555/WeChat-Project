@@ -1,0 +1,11 @@
+/* pages/face/face.wxss */
+.imageFace{
+   width: 100%;
+   margin-top: 50rpx;
+}
+.btnFace{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: #a9d3fd;
+}

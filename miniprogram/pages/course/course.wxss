@@ -1,0 +1,33 @@
+page {
+  margin: 0 0;
+  background-color: #f1f1f1;
+}
+
+.hearderImage {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  padding: 50rpx 50rpx 0rpx 50rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+}
+.hearderText {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  width: 100rpx;
+  height: 100rpx;
+  padding: 0rpx 50rpx 0rpx 50rpx;
+  text-align: center;
+}
+.text1{
+  font-size: 50rpx;
+}
+.content{
+   margin: 0 50rpx;
+}

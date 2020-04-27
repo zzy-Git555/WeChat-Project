@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/course/course",
+    "pages/personal/personal",
+    "pages/course/selfie/selfie",
+    "pages/course/scenery/scenery",
+    "pages/course/other/other",
+    "pages/template/template",
+    "pages/frameTemplate/frameTemplate",
+    "pages/face/face",
+    "pages/face/faceResult/faceResult"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d6f4f8",
+    "navigationBarTitleText": "小红帽影像馆",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#338792",
+    "list": [
+      {
+        "pagePath": "pages/course/course",
+        "text": "教程",
+        "selectedIconPath": "icons/course.png",
+        "iconPath": "icons/course(1).png"
+      },
+      {
+        "pagePath": "pages/face/face",
+        "text": "人脸识别",
+        "selectedIconPath": "icons/face.png",
+        "iconPath": "icons/face(1).png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "selectedIconPath": "icons/personal.png",
+        "iconPath": "icons/personal(1).png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
