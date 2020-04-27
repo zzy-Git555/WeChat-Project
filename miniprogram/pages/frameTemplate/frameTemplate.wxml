@@ -1,4 +1,5 @@
 <template name="content" data="{{...result}}">
+
   <view class="page" wx:for="{{result}}" wx:key="index" bindtap="detail" data-result="{{result[index]}}">
     <view class="page__bd">
       <view class="weui-panel weui-panel_access">

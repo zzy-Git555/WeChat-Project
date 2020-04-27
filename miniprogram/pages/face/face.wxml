@@ -1,4 +1,4 @@
-<image class="imageFace"mode="aspectFit" src="cloud://cloud-zzy-33dl5.636c-cloud-zzy-33dl5-1301623230/img1/faceAction.gif"></image>
-
+<image class="imageFace"mode="aspectFit" src="/icons/faceAction.gif"></image>
+<!-- cloud://cloud-zzy-33dl5.636c-cloud-zzy-33dl5-1301623230/img1/faceAction.gif -->
 <button  plain class="btnFace" bindtap="chooseImage">上传照片</button>
 

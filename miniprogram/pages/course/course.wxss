@@ -18,7 +18,10 @@ page {
   display: flex;
   justify-content: center;
 }
-
+.active {
+  color: #338792;
+  
+}
 .text {
   width: 100rpx;
   height: 100rpx;

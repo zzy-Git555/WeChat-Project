@@ -2,9 +2,6 @@
   "pages": [
     "pages/course/course",
     "pages/personal/personal",
-    "pages/course/selfie/selfie",
-    "pages/course/scenery/scenery",
-    "pages/course/other/other",
     "pages/template/template",
     "pages/frameTemplate/frameTemplate",
     "pages/face/face",

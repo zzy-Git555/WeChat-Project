@@ -1,27 +1,55 @@
 <import src='/pages/frameTemplate/frameTemplate.wxml' />
 <view class="hearderImage">
-  <navigator hover-class="none" url="selfie/selfie">
+  <!-- <navigator hover-class="none" url="selfie/selfie">
     <image mode="aspectFit" class="img" src="/icons/camera.png" />
+    <view class="text">自拍</view>
   </navigator>
   <navigator hover-class="none" url="scenery/scenery">
     <image mode="aspectFit" class="img" src="/icons/scenery.png" />
+     <view class="text">风景</view>
   </navigator>
   <navigator hover-class="none" url="other/other">
     <image mode="aspectFit" class="img" src="/icons/other.png" />
-  </navigator>
-
-
-
+    <view class="text">其他</view>
+  </navigator> -->
+  <view class=" {{tab==0?'active':''}}" bindtap="changeItem" data-index="0">
+    <image mode="aspectFit" class="img" src="/icons/camera.png" data-index="0" />
+    <view class="text" data-index="0">自拍</view>
+  </view>
+  <view class=" {{tab==1?'active':''}}" bindtap="changeItem" data-index="1">
+    <image mode="aspectFit" class="img" src="/icons/scenery.png" data-index="1" />
+    <view class="text" data-index="1">风景</view>
+  </view>
+  <view class=" {{tab==2?'active':''}}" bindtap="changeItem" data-index="2">
+    <image mode="aspectFit" class="img" src="/icons/other.png" data-index="2" />
+    <view class="text" data-index="2">其他</view>
+  </view>
 </view>
-<view class="hearderText">
+<!-- <include src="./selfie/selfie.wxml" /> -->
+<!-- 内容区域 -->
+
+<swiper current="{{item}}" bindchange="changeTab" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+  <swiper-item>
+      <include src="selfie.wxml" />
+    </swiper-item>
+  <swiper-item>
+    <include src="scenery.wxml" />
+  </swiper-item>
+  <swiper-item>
+    <include src="other.wxml" />
+  </swiper-item>
+  
+</swiper>
+
+<!-- <view class="hearderText">
   <view class="text">自拍</view>
   <view class="text">风景</view>
   <view class="text">其他</view>
-</view>
+</view> -->
 
-<view class="content">
+<!-- <view class="content">
   <view class="text1">每日推荐</view>
 
   <template is='content' data='{{result}}' />
 
-</view>
+</view> -->
