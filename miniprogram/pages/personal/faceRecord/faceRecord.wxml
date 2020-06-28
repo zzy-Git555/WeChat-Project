@@ -1,6 +1,5 @@
-<template name="content" data="{{...result}}">
 
-  <view class="page" wx:for="{{result}}" wx:key="index" bindtap="detail" data-result="{{result[index]}}">
+<view class="page" wx:for="{{result}}" wx:key="index" bindtap="detail" data-result="{{result[index]}}">
     <view class="page__bd">
       <view class="weui-panel weui-panel_access">
         <view class="weui-panel__bd">
@@ -9,13 +8,11 @@
               <image lazy-load mode="scaleToFill" class="weui-media-box__thumb" src="{{item.img[0]}}" />
             </view>
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-              <view class="weui-media-box__title">{{item.title}}</view>
-              <view class="weui-media-box__desc">{{item.contents}}</view>
+              <view class="weui-media-box__title">人脸识别记录</view>
+              <view class="weui-media-box__desc">{{item.time}}</view>
             </view>
           </view>
         </view>
       </view>
     </view>
   </view>
-
-</template>

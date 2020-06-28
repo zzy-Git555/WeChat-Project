@@ -1,5 +1,5 @@
-<import src='/pages/frameTemplate/frameTemplate.wxml' />
+<import src='/pages/frameTemplate/OtherTemplate/OtherTemplate.wxml' />
 <view class="content">
   <view class="text1">其他拍摄教程</view>
-  <template is='content' data='{{result}}' />
+  <template is='othercontent' data='{{otherresult}}' />
 </view>

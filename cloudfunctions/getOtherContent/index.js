@@ -6,13 +6,12 @@ cloud.init({
 })
 
 // 云函数入口函数
-exports.main = async(event, context) => {
- 
+exports.main = async (event, context) => {
+  const wxContext = cloud.getWXContext()
+
   const db = cloud.database()
 
-  return await db.collection("Content")
+  return await db.collection("otherContent")
 
     .get()
-
-
 }

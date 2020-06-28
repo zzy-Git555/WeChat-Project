@@ -46,8 +46,8 @@
 				},
 				{
 					"id": 1,
-					"name": "pages/personal/personal",
-					"pathName": "pages/personal/personal",
+					"name": "pages/personal/faceRecord/faceRecord",
+					"pathName": "pages/personal/faceRecord/faceRecord",
 					"query": "",
 					"scene": null
 				},

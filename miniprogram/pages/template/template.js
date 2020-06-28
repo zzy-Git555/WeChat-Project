@@ -1,13 +1,73 @@
 // miniprogram/pages/template/template.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-   
+    isShow:false,
+    vote:0
   },
+  likeClick:function(){
+    if(this.data.isShow != true){
+      wx.cloud.callFunction({
+        name:'like',
+        data:{
+          contents: this.data.contents,
+          filterCourse:this.data.filterCourse,
+          img:this.data.img,
+          title:this.data.title,
+          tools:this.data.tools
+        }
+      })
+      wx.showToast({
+        title: '收藏成功',
+        icon:'success',
+        duration:2000
+      })
+      console.log("可", this.data.contents)
+    }else{
+      wx.cloud.callFunction({
+        name:'remove',
+        data:{
+          contents: this.data.contents
+        }
+      })
+      wx.showToast({
+        title: '取消收藏',
+        icon:'none',
+        duration:2000
+      })
+    }
+   
+    this.setData({
+      isShow:this.data.isShow==false ? true : false
+    })
+  },
+  add:function(){
+    wx.cloud.callFunction({
+      name:'add',
+      data:{
+        vote:this.data.vote++
+      },
+      success:res=>{
+       this.setData({
+        vote:this.data.vote++
+       })
+       wx.showToast({
+        title: '点赞',
+        duration:100
+      })
+      },fail:err=>{
+        console.log(err)
+      }
+    })
 
+    
+
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */

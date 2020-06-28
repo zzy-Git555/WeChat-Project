@@ -1,5 +1,6 @@
-<import src='/pages/frameTemplate/frameTemplate.wxml' />
+<import src='/pages/frameTemplate/SeneryTemplate/SeneryTemplate.wxml' />
+
 <view class="content">
   <view class="text1">风景拍摄教程</view>
-  <template is='content' data='{{result}}' />
+  <template is='Senerycontent' data='{{Seneryresult}}' />
 </view>

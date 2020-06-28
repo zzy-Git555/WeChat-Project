@@ -32,14 +32,14 @@ Page({
   // },
   //页面切换
   changeItem: function(e) {
-    console.log(e)
+   
     this.setData({
       item: e.target.dataset.index
     })
   },
   //tab切换
   changeTab: function(e) {
-    console.log(e)
+  
     this.setData({
       tab: e.detail.current
     })
@@ -47,32 +47,61 @@ Page({
 
   onLoad: function(options) {
     var that = this
-    // wx.cloud.callFunction({
-    //   name: 'getContent',
-    //   success: res => {
-    //     console.log("云函数返回的数据", res)
-    //     var result = res.data
-    //     this.setData({
-    //       result
-    //     })
-    //   },
-    //   fail: err => {
-    //     console.error('云函数调用失败', err)
-    //   }
-    // })
-    const db = wx.cloud.database()
-    db.collection("Content").get()
-
-      .then(res => {
-
-        var result = res.data
-        // console.log(result)
+    wx.cloud.callFunction({
+      name: 'getContent',
+      success: res => {
+        var result = res.result.data
+        console.log("自拍页面返回的数据（云函数）", result)
+      
         this.setData({
           result
         })
-      }).catch(err => {
-        console.error(err)
-      })
+      },
+      fail: err => {
+        console.error('自拍页面云函数调用失败', err)
+      }
+    }),
+    wx.cloud.callFunction({
+      name: 'getSeneryContent',
+      success: res => {
+        var Seneryresult = res.result.data
+        console.log("风景页面返回的数据（云函数）", Seneryresult)
+      
+        this.setData({
+          Seneryresult
+        })
+      },
+      fail: err => {
+        console.error('风景页面云函数调用失败', err)
+      }
+    })
+    wx.cloud.callFunction({
+      name: 'getOtherContent',
+      success: res => {
+        var otherresult = res.result.data
+        console.log("其他页面返回的数据（云函数）", otherresult)
+      
+        this.setData({
+          otherresult
+        })
+      },
+      fail: err => {
+        console.error('其他页面云函数调用失败', err)
+      }
+    })
+    // const db = wx.cloud.database()
+    // db.collection("Content").get()
+
+    //   .then(res => {
+
+    //     var result = res.data
+    //     console.log("云函数返回的数据", result)
+    //     this.setData({
+    //       result
+    //     })
+    //   }).catch(err => {
+    //     console.error(err)
+    //   })
     var that = this
     wx.getSystemInfo({
       success: function(res) {

@@ -1,21 +1,37 @@
-// miniprogram/pages/frameTemplate/frameTemplate.js
+// miniprogram/pages/personal/like/like.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    isShow:true
   },
-  // detail: function (e) {
-  //   var data1 = e.currentTarget.dataset.result
-  //   console.log(data1)
-  // },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+    const db = wx.cloud.database()
+    db.collection("like").get()
+
+      .then(res => {
+
+         var result = res.data
+        console.log(res.data[0])
+         this.setData({
+          result
+         })
+      }).catch(err => {
+        console.error(err)
+      })
+  },
+  detail: function(e) {
+    var data = JSON.stringify(e.currentTarget.dataset.result)
+    console.log("传输过去的数据:", data)
+    wx.navigateTo({
+      url: '/pages/template/template?detail=' + data,
+    })
   },
 
   /**

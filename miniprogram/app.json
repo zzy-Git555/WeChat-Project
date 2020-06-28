@@ -6,7 +6,11 @@
     "pages/frameTemplate/frameTemplate",
     "pages/face/face",
     "pages/face/faceResult/faceResult",
-    "pages/personal/about/about"
+    "pages/personal/about/about",
+    "pages/frameTemplate/SeneryTemplate/SeneryTemplate",
+    "pages/frameTemplate/OtherTemplate/OtherTemplate",
+    "pages/personal/like/like",
+    "pages/personal/faceRecord/faceRecord"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

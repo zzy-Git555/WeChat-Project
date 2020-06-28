@@ -4,3 +4,23 @@ page{
 image{
     margin: 4px 0;
 }
+.image1{
+    width: 50rpx;
+    height: 50rpx;
+    padding: 50rpx 50rpx 0rpx 10rpx;
+}
+.Icon{
+    display: flex;
+    justify-content: center;
+    
+}
+.IconText{
+    display: flex;
+    justify-content: center;
+   
+}
+.Text{
+    font-size: 20rpx;
+    padding: 0rpx 50rpx 10rpx 10rpx;
+
+}

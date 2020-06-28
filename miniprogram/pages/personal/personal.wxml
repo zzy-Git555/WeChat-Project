@@ -33,12 +33,19 @@
         <text class="text-grey">意见反馈</text>
       </button>
     </view>
+     <view class="cu-item arrow">
+      <navigator class="content" url="/pages/personal/faceRecord//faceRecord" hover-class="none">
+        <text class="cuIcon-recordfill text-yellow"></text>
+        <text class="text-grey">人脸识别记录</text>
+      </navigator>
+    </view>
     <view class="cu-item arrow">
-      <navigator class="content" url="/pages/about/test/list" hover-class="none">
-        <text class="cuIcon-creativefill text-orange"></text>
+      <navigator class="content" url="/pages/personal/like/like" hover-class="none">
+        <text class="cuIcon-likefill text-red"></text>
         <text class="text-grey">我的收藏</text>
       </navigator>
     </view>
+ 
   </view>
   <view class="cu-tabbar-height"></view>
 </scroll-view>

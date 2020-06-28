@@ -1,4 +1,4 @@
-// miniprogram/pages/frameTemplate/frameTemplate.js
+// miniprogram/pages/frameTemplate/SeneryTemplate/SeneryTemplate.js
 Page({
 
   /**
@@ -7,15 +7,22 @@ Page({
   data: {
 
   },
-  // detail: function (e) {
-  //   var data1 = e.currentTarget.dataset.result
-  //   console.log(data1)
-  // },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+    const db = wx.cloud.database()
+    db.collection("SceneryContent").get()
+      .then(res => {
+      var Seneryresult = res.result.data
+      console.log("...", Seneryresult)
+        this.setData({
+          Sceneryresult
+        })
+      }).catch(err => {
+        console.error(err)
+      })
   },
 
   /**

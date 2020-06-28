@@ -1,6 +1,6 @@
-<template name="content" data="{{...result}}">
+<template name="othercontent" data="{{...otherresult}}">
 
-  <view class="page" wx:for="{{result}}" wx:key="index" bindtap="detail" data-result="{{result[index]}}">
+  <view class="page" wx:for="{{otherresult}}" wx:key="index" bindtap="detail" data-result="{{otherresult[index]}}">
     <view class="page__bd">
       <view class="weui-panel weui-panel_access">
         <view class="weui-panel__bd">

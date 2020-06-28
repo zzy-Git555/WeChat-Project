@@ -1,4 +1,4 @@
-// miniprogram/pages/frameTemplate/frameTemplate.js
+// miniprogram/pages/personal/faceRecord/faceRecord.js
 Page({
 
   /**
@@ -7,15 +7,12 @@ Page({
   data: {
 
   },
-  // detail: function (e) {
-  //   var data1 = e.currentTarget.dataset.result
-  //   console.log(data1)
-  // },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+
   },
 
   /**

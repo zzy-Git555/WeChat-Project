@@ -1,0 +1,2 @@
+<import src='/pages/frameTemplate/frameTemplate.wxml' />
+ <template is='content' data='{{result}}' />

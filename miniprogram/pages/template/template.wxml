@@ -1,25 +1,38 @@
+<view class="Icon">
+	<image wx:if="{{isShow}}" catchtap="likeClick" src="../../icons/likefill.png" class="image1"></image>
+	<image wx:else="{{isShow}}" catchtap="likeClick" src="../../icons/like.png" class="image1"></image>
+	<image src="../../icons/appreciate.png" class="image1" bindtap="add"></image>
+</view>
+<view class="IconText">
+	<view class="Text">收藏</view>
+	<view class="Text">点赞+{{vote}}</view>
+</view>
+
+
 
 <view class="page">
-    <view class="page__bd">
-        <view class="weui-article">
-            <view class="weui-article__h1">{{title}}</view>
-            <view class="weui-article__section">
-                <view class="weui-article__section">
-                    <view class="weui-article__h3">1.1 拍照方法</view>
-                    <view class="weui-article__p">
-                        {{contents}}
-                    </view>
-                    <view class="weui-article__p" wx:for="{{img}}" wx:key="index">
-                        <image lazy-load class="weui-article__img" src="{{img[index]}}" mode="aspectFit" />
-                    </view>
-                </view>
-                <view class="weui-article__section">
-                    <view class="weui-article__h3">1.2 滤镜教程</view>
-                    <view class="weui-article__p">
-                      {{filterCourse}}
-                    </view>
-                </view>
-            </view>
-        </view>
-    </view>
+	<view class="page__bd">
+		<view class="weui-article">
+			<view class="weui-article__h1">
+				{{title}}
+			</view>
+			<view class="weui-article__section">
+				<view class="weui-article__section">
+					<view class="weui-article__h3">1.1 拍照方法</view>
+					<view class="weui-article__p">
+						{{contents}}
+					</view>
+					<view class="weui-article__p" wx:for="{{img}}" wx:key="index">
+						<image lazy-load class="weui-article__img" src="{{img[index]}}" mode="aspectFit" />
+					</view>
+				</view>
+				<view class="weui-article__section">
+					<view class="weui-article__h3">1.2 滤镜教程</view>
+					<view class="weui-article__p">
+						{{filterCourse}}
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
 </view>
